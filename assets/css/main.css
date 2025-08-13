@@ -2309,3 +2309,46 @@ body.is-preload #wrapper {
         padding: 6px 10px;
     }
 }
+
+/* Video container styling to match slide container */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 2em auto;
+    background-image: url("images/overlay.png"), url("images/bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-attachment: fixed;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Responsive adjustments for video container */
+@media screen and (max-width: 1280px) {
+    .video-container {
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .video-container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .video-container {
+        max-width: 100%;
+        margin: 1.5em auto;
+    }
+}
