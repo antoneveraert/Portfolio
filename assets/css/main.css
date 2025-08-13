@@ -1193,8 +1193,13 @@ textarea {
 .work-item {
     display: flex;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
     width: 100%;
+    min-height: fit-content;
+}
+
+.work-item:last-child {
+    margin-bottom: 2em;
 }
 
 .work-item:nth-child(even) {
@@ -1203,7 +1208,10 @@ textarea {
 
 .work-item .image-container {
     flex: 0 0 50%;
-    padding: 1em;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .work-item .content-container {
@@ -1219,13 +1227,24 @@ textarea {
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 980px) {
+    .work-item {
+        margin-bottom: 2.5em;
+    }
+    .work-item .image-container {
+        padding: 0.75em;
+    }
+}
+
 @media screen and (max-width: 736px) {
     .work-item {
         flex-direction: column !important;
+        margin-bottom: 1em;
     }
     .work-item .image-container,
     .work-item .content-container {
         flex: 0 0 100%;
+        padding: 0.5em;
     }
 }
 
@@ -2310,7 +2329,9 @@ body.is-preload #wrapper {
     }
 }
 
+
 /* Video container styling to match slide container */
+
 .video-container {
     position: relative;
     width: 100%;
@@ -2333,7 +2354,9 @@ body.is-preload #wrapper {
     display: block;
 }
 
+
 /* Responsive adjustments for video container */
+
 @media screen and (max-width: 1280px) {
     .video-container {
         max-width: 800px;
@@ -2351,4 +2374,50 @@ body.is-preload #wrapper {
         max-width: 100%;
         margin: 1.5em auto;
     }
+}
+
+
+/* Work section image styling to match slide container */
+
+.work-item .image-container .image {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: url("images/overlay.png"), url("images/bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}
+
+.work-item .image-container img {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+
+/* Special styling for the profile image in home section */
+
+#home .work-item .image-container .image {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: url("images/overlay.png"), url("images/bg.jpg");
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}
+
+#home .work-item .image-container img {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
 }
