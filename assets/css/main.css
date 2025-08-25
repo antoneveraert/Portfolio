@@ -1923,7 +1923,9 @@ button:hover,
     text-shadow: none;
 }
 
+
 /* Prevent underline on anchor buttons in all states */
+
 a.button,
 a.button:hover,
 a.button:focus,
@@ -2995,7 +2997,7 @@ body.is-preload #wrapper {
     justify-content: space-evenly;
     gap: 0;
     width: 100%;
-    margin: 0.75em 0 1.5em;
+    margin: 1.5em 0 1.5em;
 }
 
 .social-links .icon {
